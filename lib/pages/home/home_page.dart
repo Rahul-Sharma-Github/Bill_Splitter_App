@@ -41,11 +41,8 @@ class HomePage extends StatelessWidget {
                   ],
                 ),
                 // child = 2 [ information Card Widget]
-                Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(16),
-                    color: Colors.yellow,
-                  ),
+                Card(
+                  color: Colors.yellow.withOpacity(0.5),
                   child: Padding(
                     padding: const EdgeInsets.symmetric(
                         vertical: 20, horizontal: 10),
