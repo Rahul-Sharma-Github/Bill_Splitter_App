@@ -42,7 +42,7 @@ class HomePage extends StatelessWidget {
                 ),
                 // child = 2 [ information Card Widget]
                 Card(
-                  color: Colors.yellow.withOpacity(0.5),
+                  color: Colors.amber.shade700.withOpacity(0.8),
                   child: Padding(
                     padding: const EdgeInsets.symmetric(
                         vertical: 20, horizontal: 10),
@@ -59,15 +59,18 @@ class HomePage extends StatelessWidget {
                                 const Text(
                                   'Total',
                                   style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 22),
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 22,
+                                  ),
                                 ),
                                 Obx(
                                   () => Text(
                                     '${homeController.totalAmount.value} ₹',
                                     style: const TextStyle(
-                                        fontWeight: FontWeight.w500,
-                                        fontSize: 20),
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 20,
+                                      color: Colors.white,
+                                    ),
                                   ),
                                 ),
                               ],
@@ -112,24 +115,30 @@ class HomePage extends StatelessWidget {
                                           .round()
                                           .toString(),
                                       style: const TextStyle(
-                                          fontWeight: FontWeight.w500,
-                                          fontSize: 18),
+                                        fontWeight: FontWeight.w500,
+                                        fontSize: 18,
+                                        color: Colors.white,
+                                      ),
                                     ),
                                   ),
                                   Obx(
                                     () => Text(
                                       '${homeController.taxAmount.value.toString()} %',
                                       style: const TextStyle(
-                                          fontWeight: FontWeight.w500,
-                                          fontSize: 18),
+                                        fontWeight: FontWeight.w500,
+                                        fontSize: 18,
+                                        color: Colors.white,
+                                      ),
                                     ),
                                   ),
                                   Obx(
                                     () => Text(
                                       '${homeController.tipAmount.value.toString()} ₹',
                                       style: const TextStyle(
-                                          fontWeight: FontWeight.w500,
-                                          fontSize: 18),
+                                        fontWeight: FontWeight.w500,
+                                        fontSize: 18,
+                                        color: Colors.white,
+                                      ),
                                     ),
                                   ),
                                 ],
@@ -142,18 +151,19 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
                 // child = 3 [ Friend Count Slider Widget]
-                const Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.only(top: 40),
-                      child: Text(
+                const Divider(thickness: 2, height: 20),
+                const Padding(
+                  padding: EdgeInsets.symmetric(vertical: 20),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
                         'How many friends ?',
                         style: TextStyle(
                             fontWeight: FontWeight.w700, fontSize: 18),
-                      ),
-                    )
-                  ],
+                      )
+                    ],
+                  ),
                 ),
                 Obx(
                   () => Slider(
@@ -169,9 +179,10 @@ class HomePage extends StatelessWidget {
                     },
                   ),
                 ),
+                const Divider(thickness: 2, height: 20),
                 // child = 4 [ Tip and Tax Widget]
                 Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 30),
+                  padding: const EdgeInsets.symmetric(vertical: 20),
                   child: Row(
                     children: [
                       Expanded(
@@ -247,7 +258,7 @@ class HomePage extends StatelessWidget {
                     ],
                   ),
                 ),
-
+                const Divider(thickness: 2, height: 20),
                 // child = 5 [ Total amount textfield Widget]
                 const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -280,6 +291,7 @@ class HomePage extends StatelessWidget {
                     },
                   ),
                 ),
+                const Divider(thickness: 2, height: 20),
                 const SizedBox(
                   height: 25,
                 ),
