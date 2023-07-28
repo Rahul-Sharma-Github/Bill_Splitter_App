@@ -171,7 +171,10 @@ class ResultPage extends StatelessWidget {
                   'Calculate Again ?',
                   style: TextStyle(fontSize: 20, color: Colors.white),
                 ),
-              )
+              ),
+              const SizedBox(
+                height: 50,
+              ),
             ],
           ),
         ),

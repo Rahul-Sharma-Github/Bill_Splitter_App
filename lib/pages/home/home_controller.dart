@@ -36,13 +36,17 @@ class HomeController extends GetxController {
   // Calculations for getting equally divided amount for each friend
 
   String equallyDividedValue() {
-    var preEquallyDivided =
-        (double.parse(totalAmount.value) / 100 * taxAmount.value) +
-            double.parse(totalAmount.value) +
-            double.parse(tipAmount.value);
+    try {
+      var preEquallyDivided =
+          (double.parse(totalAmount.value) / 100 * taxAmount.value) +
+              double.parse(totalAmount.value) +
+              double.parse(tipAmount.value);
 
-    var equallyDivided = preEquallyDivided / currentSliderValue.value;
+      var equallyDivided = preEquallyDivided / currentSliderValue.value;
 
-    return equallyDivided.toPrecision(2).toString();
+      return equallyDivided.toPrecision(2).toString();
+    } catch (e) {
+      return e.toString();
+    }
   }
 }
