@@ -275,7 +275,7 @@ class HomePage extends StatelessWidget {
                   ],
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 10),
+                  padding: const EdgeInsets.symmetric(vertical: 20),
                   child: TextField(
                     keyboardType: TextInputType.number,
                     decoration: InputDecoration(
