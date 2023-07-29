@@ -1,16 +1,21 @@
-# bill_splitter_app
+# Bill Splitter App 
+Made it with GetX State Management
 
-A new Flutter project.
+# UI 
+##
+## 
+<img src="https://github.com/Rahul-Sharma-Github/bill_splitter_app/assets/64002004/e199c655-b605-4239-93fc-70c21a3d326a" width="393" height="852">
 
-## Getting Started
+## 
+## 
 
-This project is a starting point for a Flutter application.
+<img src="https://github.com/Rahul-Sharma-Github/bill_splitter_app/assets/64002004/54fc2982-af40-4307-99f9-59a554cd24fe" width="393" height="852">
 
-A few resources to get you started if this is your first Flutter project:
+## 
+## 
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+<img src="https://github.com/Rahul-Sharma-Github/bill_splitter_app/assets/64002004/92222eff-4018-4ac9-8a85-edfacbc39c90" width="393" height="852">
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 
+## 
+
