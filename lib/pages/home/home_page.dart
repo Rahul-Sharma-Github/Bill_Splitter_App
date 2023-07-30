@@ -300,18 +300,41 @@ class HomePage extends StatelessWidget {
                 // child = 6 [ Split Bill Button Widget]
                 ElevatedButton(
                   onPressed: () {
-                    // Initializing the ResultData Model class with values and Passing the values
-                    // so that on ResultPage we can use these values
-                    Get.to(() => ResultPage(
-                          resultData: ResultData(
-                            homeController.equallyDividedValue(),
-                            homeController.currentSliderValue.value
-                                .round()
-                                .toString(),
-                            homeController.taxAmount.value.toString(),
-                            homeController.tipAmount.value.toString(),
-                          ),
-                        ));
+                    // Testing and Checking the values first
+                    if (homeController.totalAmount.value == '0' ||
+                        homeController.totalAmount.value.length.isEqual(0)) {
+                      Get.snackbar('Warning', 'Enter Total Amount');
+                    } else {
+                      if (homeController.tipAmount.value.length.isEqual(0)) {
+                        homeController.tipAmount.value = '0';
+
+                        // Initializing the ResultData Model class with values and Passing the values
+                        // so that on ResultPage we can use these values
+                        Get.to(() => ResultPage(
+                              resultData: ResultData(
+                                homeController.equallyDividedValue(),
+                                homeController.currentSliderValue.value
+                                    .round()
+                                    .toString(),
+                                homeController.taxAmount.value.toString(),
+                                homeController.tipAmount.value.toString(),
+                              ),
+                            ));
+                      } else {
+                        // Initializing the ResultData Model class with values and Passing the values
+                        // so that on ResultPage we can use these values
+                        Get.to(() => ResultPage(
+                              resultData: ResultData(
+                                homeController.equallyDividedValue(),
+                                homeController.currentSliderValue.value
+                                    .round()
+                                    .toString(),
+                                homeController.taxAmount.value.toString(),
+                                homeController.tipAmount.value.toString(),
+                              ),
+                            ));
+                      }
+                    }
                   },
                   style: ButtonStyle(
                     backgroundColor:
